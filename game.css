@@ -1,0 +1,117 @@
+body {
+    color: rgb(249, 249, 249);
+    background-color: #282c34;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    background: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.hud-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.hud-main-text {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#progressBar {
+    width: 100%;
+    height: 3rem;
+    border: 0.2rem solid rgb(11, 238, 36);
+    border-radius: 50px;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background: rgb(11, 238, 36);
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.choice-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background: blue;
+    font-size: 1.5rem;
+    padding: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 whitesmoke;
+    transform: scale(1.02);
+}
+
+.choice-prefix {
+    padding: 1rem 1.5rem;
+    color: white;
+}
+
+.choice-text {
+    padding: 1rem;
+    width: 100%;
+    color: white;
+}
+
+.correct {
+    background: linear-gradient(rgb(12, 238, 12), yellow);
+}
+
+.incorrect {
+    background: linear-gradient(red, rgb(255, 68, 0));
+}
+
+@media screen and (max-width: 768px) {
+    .choice-container {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+
+    .hud-prefix, .hud-main-text {
+        font-size: 1.2rem;
+    }
+
+    #progressBar {
+        height: 2rem;
+    }
+}
